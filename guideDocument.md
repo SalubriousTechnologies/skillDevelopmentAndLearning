@@ -17,6 +17,7 @@
 - Stimulus Reflex & AnyCable
 - Tensorflow
 - Machine Learning
+- Mobile Application Development
 
 ## Topics around these technologies
 
