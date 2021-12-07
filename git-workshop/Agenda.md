@@ -18,9 +18,10 @@
 6. PR and review process
 7. Rebasing and it's use, cherry-picking
 8. Readme and markdown
+9. Handling a wrong/accidental commit
 
 ## Further reading
 
-9. `git diff`
-10. `git log`
-11. `git blame`, SHA-1 and other details
+10. `git diff`
+11. `git log`
+12. `git blame`, SHA-1 and other details
