@@ -64,7 +64,7 @@ It accept only one value i.e `undefined`
 
 It accept only one value i.e `null`
 
-`let nullVar : undefined = null`
+`let nullVar : null = null`
 
 **Symbol**
 
