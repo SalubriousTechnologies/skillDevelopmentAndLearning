@@ -28,7 +28,11 @@ _Note:_ this is different from type-coercion which is basically what happens whe
 
 ## Types
 
+A detailed discussion, however non-exhaustive, can be accessed from the file [Type Basics](TypeBasic.md)
+
 ## Functions
+
+An overview discussion of functions in TS is presented in the file [Functions](Functions.md)
 
 ## Classes
 
@@ -48,11 +52,11 @@ Example of generic code:
 
 Heavily used in libraries, and will likely encounter in type definition files. These are particularly powerful when used with classes or in conjunction with interfaces using the `extend` keyword.
 
-## TSX and React Typings
+## TSX and React Typings [WIP]
 
 Reading [type definition file](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/v16/index.d.ts) generally available through `@types/<package>`
 
-## Streamlining Workflow
+## Streamlining Workflow [Resource List]
 
 - [Concurrently](https://www.npmjs.com/package/concurrently)
 - [Migrating existing workflow](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
