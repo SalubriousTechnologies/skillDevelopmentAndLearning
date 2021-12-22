@@ -154,10 +154,10 @@ const str = = lastElement<number>([‘a’,’b’,’c’])
 ```
 Example : 2
 
-const putElementInArray = <T,U>(x:T, y:U) : [T,U]=>{
-return[x,y]
+const putElementInArray = <T,U,V>(x:T, y:U,z:V) : [T,U,V]=>{
+return[x,y,z]
 }
-const el = putElementInArray<number,number>(1,2)
-const el2 = putElementInArray<string,string>(‘1’,’2’)
-const el3 = putElementInArray<string,number>(‘1’,2)
+const el = putElementInArray<number,number,boolean>(1,2,true)
+const el2 = putElementInArray<string,string,boolean>(‘1’,’2’,true)
+const el3 = putElementInArray<string,number,boolean>(‘1’,2,true)
 ```

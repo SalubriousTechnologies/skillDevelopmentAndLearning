@@ -37,6 +37,12 @@ Typescript uses the syntax `: type` after an identifier as the type annotation, 
 
 number is for numbers like 42. JavaScript does not have a special run time value for integers, so there’s no equivalent to int or float - everything is simply number
 
+If number is big integer then we will use
+
+The big integers represent the whole numbers larger than 253 – 1.
+
+`let big: bigint = 9007199254740991n;`
+
 **string**
 
 string represents string values like "Hello, world"
@@ -47,6 +53,22 @@ string represents string values like "Hello, world"
 boolean is for the two values true and false
 `let pending: boolean`;
 `pending = true`;
+
+**Undefined**
+
+It accept only one value i.e `undefined`
+
+`let undefinedVar : undefined = undefined`
+
+**null**
+
+It accept only one value i.e `null`
+
+`let nullVar : undefined = null`
+
+**Symbol**
+
+`let sym1 = Symbol();`
 
 **Object Type**
 
@@ -81,7 +103,7 @@ we can use optional properties
 type personObj = {
 name:string;
 age:number,
-mobile? = number
+mobile? : number
 }
 
 let person : personObj = {
