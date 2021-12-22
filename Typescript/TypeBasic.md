@@ -198,6 +198,22 @@ instead of repeating types , we can use type aliases
 `let a : varType = 10`
 `let b : varType = 20`
 
+**Type Inference**
+
+TypeScript guesses the type
+
+TypeScript uses the best common type algorithm to select the best candidate types that are compatible with all variables.
+
+`let infVar = "some text"`
+
+Here, since we are not explicitly defining `infVar: string` with a type annotation, TypeScript infers the type of the variable based on the value assigned to the variable. The value of `infVar` is a `string` and hence the type of `infVar` is inferred as `string`.
+
+```
+let infVar = "some text";
+linfVar = 123;  // Compiler Error
+
+```
+
 **String literal types**
 
 Apply values rather than apply types to a variable or parameter
