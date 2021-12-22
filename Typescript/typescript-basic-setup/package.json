@@ -1,0 +1,16 @@
+{
+  "name": "typescript-basic-setup",
+  "version": "0.1.0",
+  "description": "Basic setup with ts for workshop",
+  "main": "index.js",
+  "scripts": {
+    "tsc:init": "tsc --init",
+    "tsc:watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
