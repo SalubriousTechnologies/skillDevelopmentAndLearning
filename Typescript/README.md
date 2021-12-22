@@ -28,7 +28,11 @@ _Note:_ this is different from type-coercion which is basically what happens whe
 
 ## Types
 
+A detailed discussion, however non-exhaustive, can be accessed from the file [Type Basics](TypeBasic.md)
+
 ## Functions
+
+An overview discussion of functions in TS is presented in the file [Functions](Functions.md)
 
 ## Classes
 
@@ -38,11 +42,21 @@ The TS handbook has a section dedicated to working with classes and can be acces
 
 For a quick understanding of the challenges of `this` in JS and how to use TS to mitigate them refer to [this section](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-at-runtime-in-classes) of the handbook.
 
+For getting started with visit the file [\_first.js](./classes/_first.js)
+
 ## Generics
 
-## TSX and React Typings
+Example of generic code:
 
-## Streamlining Workflow
+- [Sorting method](https://gist.github.com/JulianG/a935bee4328813c6aaebf2b229eb360d)
+
+Heavily used in libraries, and will likely encounter in type definition files. These are particularly powerful when used with classes or in conjunction with interfaces using the `extend` keyword.
+
+## TSX and React Typings [WIP]
+
+Reading [type definition file](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/v16/index.d.ts) generally available through `@types/<package>`
+
+## Streamlining Workflow [Resource List]
 
 - [Concurrently](https://www.npmjs.com/package/concurrently)
 - [Migrating existing workflow](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
