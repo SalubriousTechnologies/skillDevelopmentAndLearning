@@ -4,6 +4,7 @@ interface Human {
   contactNumber: string;
 }
 
+// structural comparison
 class Person implements Human {
   name: string;
   contactNumber: string;
@@ -20,18 +21,34 @@ class Person implements Human {
   //   constructor(
   //     public name: string,
   //     public contactNumber: string,
-  //     public address,
+  //     protected address,
   //   ) {}
 }
 
 // extends
+class Doctor extends Person {
+  category: string;
+  constructor(
+    name: string,
+    contactNumber: string,
+    address: string,
+    category: string,
+  ) {
+    super(name, contactNumber, address);
+    this.category = category;
+  }
+  // getter and setters
+  get fees(): number {
+    if (this.category === "A") {
+      return 50;
+    } else return 100;
+  }
+}
 
-// [visibility modifiers] public, private, protected
+// [visibility modifiers] public, protected, private
 
 // static - do not require an instance
 
 // abstract classes
-
-// structural comparison
 
 // explanation of `this` with TS in Class

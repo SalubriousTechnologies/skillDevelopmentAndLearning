@@ -1,9 +1,27 @@
+/*
+  This file gives a very very brief overview of classes in JS,
+  the objective of this hands-on is to transport this class to
+  TypeScript, in the adjoining first.ts file
+*/
+
+// Unlike functions in JS, classes cannot be instantiated before
+// being defined, the following 1 line of code fails since the
+// class is attempted to be instantiated before being defined.
+
 // const aPoint = new Point(5, 7);
-// aPoint(5, 7);
-// console.log(aPoint.coordinates());
+
+// This is a class declaration as compared to a class expression
+// you can get more details from the MDN docs at
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 class Point {
+  // Each class upon being instantiated, invokes the constructor
+  // function of that class, so in this case any instantiation of
+  // the class Point by using `new Point(x,y)` will result in this
+  // constructor being invoked which requires 2 parameters to be passed
   constructor(x, y) {
+    // this line essentially sets that passed in parameter to be
+    // the properties of this class, public here by default
     this.x = x;
     this.y = y;
   }
