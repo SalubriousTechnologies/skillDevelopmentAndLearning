@@ -36,4 +36,15 @@ Once we have an image, we can then create a container from this image by running
 docker run hello-world
 ```
 
-This will create a container from this image which we had just downloaded and then run that container. Note this container prints something to the console as well which is related to how the containers are linked to the STDOUT and STDIN. More details for this can be found in the [docs here](https://docs.docker.com/engine/reference/run/#foreground)
+This will create a container from this image which we had just downloaded and then run that container.
+Note this container prints something to the console as well which is related to how the containers are linked to the STDOUT and STDIN.
+More details for this can be found in the [docs here](https://docs.docker.com/engine/reference/run/#foreground)
+
+To check the containers on your system you can execute the following command
+
+```
+docker container ls -a
+```
+
+Note the -a option passed with this command and the overall syntax being fairly similar to the syntax of common Linux commands.
+In this case the `-a` option essentially outputs the
