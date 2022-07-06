@@ -41,11 +41,13 @@ The expected challenges for moving to CI/CD expected are as follows:
 ## Decisions to be revisited later
 
 1. Using vercel to deploy applications
-2. Using docker
+2. Using docker swarm in production?
+3. Mix of on_prem and cloud infrastructure for staging environment
 
 ## Important Notes
 
 1. No more qa-environment server
+2. Traefik as reverse-proxy
 
 ## Typical workflow for merging
 
@@ -57,7 +59,7 @@ The typical workflow while working with git at Salubrious Technologies is indica
 
 - Creating a branch for an issue/bug and immediately opening a draft PR of it against the main branch
 
-#### Functionality
+### Functionality
 
 For every commit to the branch the following steps will be run by GitHub Actions
 
@@ -81,8 +83,11 @@ Once the staging version is ready for deployment, the production deployment will
 
 - Using different registries for handling staging vs. production images or tagging images to represent different environments.
 - Production environment setup and outline
+- Right tools for monitoring and logging
+- Databases in staging?
 
 ## Next steps:
 
-1. Meeting plan for individual repositories
+1. Meeting plan for individual repositories (prepare with any custom activities that you do for deployments)
+   - Once the environment details etc. are clear we will work on creating a github action once we create a DockerFile for the repository
 2. Attempt to get everyone to staging with Github Actions and docker in 2 weeks
