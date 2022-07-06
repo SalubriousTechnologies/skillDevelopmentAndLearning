@@ -1,4 +1,4 @@
-# Salubrios Technologies Release Process
+# Salubrious Technologies Release Process
 
 This document is an overview document that will continually undergo revisions as
 the team, workload, deployment, services and knowledge + familiarity with
