@@ -22,7 +22,7 @@ Virtual environment can be activated by running `conda activate venv/`.
 
 You can install any library using conda by just running `conda install library-name`. For example, for installing the scikit learn, run `conda install scikit-learn`. One thing to remember is that you need to activate your virtual environment first in order to install any libraries. You can install any libraries under only a virtual environment.
 
-## Open Jupyter Notebook
+## Open up Jupyter Notebook
 
 Jupyter notebook is a code editor for machine learning. To open up a jupyter notebook, run `jupyter notebook` after activating the virtual environment. This jupyter notebook will open up in the default browser. Once the jupyter notebook is opened to use. You can create a new python file and start writing machine learning codes.
 
