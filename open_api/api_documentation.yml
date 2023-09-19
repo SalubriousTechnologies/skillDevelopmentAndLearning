@@ -1,0 +1,97 @@
+openapi: 3.1.0
+info:
+  title: Minimal OpenAPI document
+  description: |
+    This API allows doing various actions in the process
+    of consulting a patient with a doctor.
+  version: 0.1.0
+components: # Components Object (specs at https://spec.openapis.org/oas/v3.1.0#components-object)
+  schemas:
+    doctor:
+      type: object
+      properties:
+        id:
+          type: number
+          description: id of the doctor
+        name:
+          type: string
+          description: name of the doctor
+  parameters:
+    resourceId:
+      name: id
+      in: path
+      description: id of the resource
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  # responses: # response object and many more can be done too
+paths:
+  /get_doctors_dropdown: # Path Item Object
+    get: # Operation Object
+      summary: Get list of doctors for a dropdown button
+      description: |
+        Retrieve the list of doctors for a dropdown button
+      # parameters: # Parameter Object ()
+      # requestBody: # Request Body Object ()
+      responses: # Responses Object
+        "200": # wildcard response code can be 1XX, 2XX, 3XX, 4XX, or 5XX
+          description: list is okay # mandatory
+          content: # response payloads
+            application/json: # media type object (specs at https://spec.openapis.org/oas/v3.1.0#media-type-object)
+              schema: # schema object (specs at https://spec.openapis.org/oas/v3.1.0#schema-object)
+                type: array # this can be array, object, string, number, boolean
+                minItems: 1 # minimum number of items in array
+                maxItems: 10 # maximum number of items in array
+                items: # schema object
+                  type: object
+                  properties: # map pairing property names with a schema object defining a type
+                    online:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                          description: id of the doctor
+                        name:
+                          type: string
+                          description: name of the doctor
+  /doctors/{id}:
+    # parameters: # when defined at the path level this parameters is available for all operations under this path
+    #   - name: id
+    #     in: path
+    #     description: id of the doctor
+    #     required: true
+    #     schema:
+    #       type: integer
+    #       minimum: 1
+
+    get:
+      summary: Get doctor by id
+      description: |
+        Retrieve the doctor by id
+      parameters:
+        - $ref: "#/components/parameters/resourceId"
+      # parameters: # Parameter Object specs at (https://spec.openapis.org/oas/v3.1.0#parameter-object)
+      #   - name: id # this must match the name of the parameter in the path above `{id}` if the `in` key below has the value `path`
+      #     in: path # mandatory field, can be `path`, `query`, `header`, `cookie`
+      #     description: id of the doctor # optional
+      #     required: true # optional, defaults to false
+      #     schema: # parameter serialization is done based on the `style` field provided, which can be `simple`, `form`, `matrix`, `label`
+      #       type: integer
+      #       minimum: 1
+    put:
+      summary: Update doctor by id
+      description: |
+        Update the doctor by id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: # property name
+                  type: string # property type
+                  description: updated name of the doctor # property description
+                  required: false
+      responses: "204"

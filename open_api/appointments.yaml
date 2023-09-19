@@ -1,0 +1,21 @@
+components:
+  schemas:
+    doctor:
+      type: object
+      properties:
+        id:
+          type: number
+          description: id of the doctor
+        name:
+          type: string
+          description: name of the doctor
+  parameters:
+    resourceId:
+      name: id
+      in: path
+      description: id of the resource
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  # responses: # response object and many more can be done too
