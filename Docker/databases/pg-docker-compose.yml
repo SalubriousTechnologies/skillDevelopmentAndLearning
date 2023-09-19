@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=temp_db
+    networks:
+      - pg_docker
+    volumes:
+      - pgDb:/var/lib/postgresql/data
+
+  admin:
+    image: dpage/pgadmin4:2023-09-18-1
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    networks:
+      - pg_docker
+    volumes:
+      - dbDebugger:/var/lib/pgadmin
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_started
+
+volumes:
+  pgDb:
+  dbDebugger:
+
+networks:
+  pg_docker:
