@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:5
+    environment:
+      - MONGO_INITDB_DATABASE=testing
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo_docker
+
+  admin:
+    image: mongo-express:0.54.0
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=pass
+      - ME_CONFIG_MONGODB_SERVER=mongo
+    networks:
+      - mongo_docker
+    ports:
+      - "8081:8081"
+    depends_on:
+      mongo:
+        condition: service_started
+
+volumes:
+  mongo_data:
+  debug_mongo:
+
+networks:
+  mongo_docker:

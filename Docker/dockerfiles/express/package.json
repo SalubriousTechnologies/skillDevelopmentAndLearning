@@ -1,0 +1,17 @@
+{
+  "name": "express",
+  "version": "0.1.0",
+  "description": "a simple express server to show case containerization and creation of Dockerfile",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "standvpmnt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "helmet": "^4.6.0"
+  }
+}
