@@ -84,3 +84,36 @@ Here’s an example of a well-labeled issue and PR:
 - **Priority: High**
 - **Status: In Progress**
 - **Status: Review Needed**
+
+## Script for creation of labels
+
+If gh cli tool is installed, you can use the following script to create the labels:
+
+```bash
+REPO_NAME="SalubriousTechnologies/medicine_server"
+# Type Labels
+gh label create "Type: Bug" --color "d73a4a" --description "For issues that represent a bug in the system." --repo $REPO_NAME
+gh label create "Type: Enhancement" --color "a2eeef" --description "For feature requests or improvements." --repo $REPO_NAME
+gh label create "Type: Maintenance" --color "e4e669" --description "For tasks related to maintenance or refactoring." --repo $REPO_NAME
+gh label create "Type: Question" --color "d4c5f9" --description "For general questions or clarifications." --repo $REPO_NAME
+gh label create "Type: Documentation" --color "7057ff" --description "For tasks related to writing or updating documentation." --repo $REPO_NAME
+gh label create "Type: Testing" --color "f9a825" --description "For tasks related to writing tests or performing testing." --repo $REPO_NAME
+gh label create "Priority: Critical" --color "b60205" --description "For issues that need immediate attention and resolution." --repo $REPO_NAME
+gh label create "Priority: High" --color "e36209" --description "For high-importance tasks that should be prioritized after critical issues." --repo $REPO_NAME
+gh label create "Priority: Medium" --color "fbca04" --description "For tasks that are important but not urgent." --repo $REPO_NAME
+gh label create "Priority: Low" --color "0e8a16" --description "For tasks that can be addressed at a later time." --repo $REPO_NAME
+gh label create "Priority: Urgent" --color "d93f0b" --description "For the highest priority tasks that are extremely time-sensitive." --repo $REPO_NAME
+gh label create "Status: Abandoned" --color "000000" --description "For issues or tasks that are no longer being pursued." --repo $REPO_NAME
+gh label create "Status: Accepted" --color "008672" --description "For issues or tasks that have been reviewed and accepted." --repo $REPO_NAME
+gh label create "Status: Available" --color "b2b7f8" --description "For tasks that are available to be picked up." --repo $REPO_NAME
+gh label create "Status: Blocked" --color "e11d21" --description "For issues or tasks that are blocked and cannot proceed." --repo $REPO_NAME
+gh label create "Status: Completed" --color "1f83d6" --description "For tasks that have been completed." --repo $REPO_NAME
+gh label create "Status: In Progress" --color "c2e0c6" --description "For tasks that are currently being worked on." --repo $REPO_NAME
+gh label create "Status: On Hold" --color "e99695" --description "For tasks that are temporarily paused." --repo $REPO_NAME
+gh label create "Status: Pending" --color "fbca04" --description "For tasks that are waiting for something before they can proceed." --repo $REPO_NAME
+gh label create "Status: Review Needed" --color "f9d76e" --description "For tasks that need to be reviewed." --repo $REPO_NAME
+gh label create "Status: Revision Needed" --color "d93f0b" --description "For tasks that require revisions." --repo $REPO_NAME
+gh label create "Status: Needs Triage" --color "d4e8fc" --description "For new issues that need to be reviewed and categorized." --repo $REPO_NAME
+gh label create "Status: Duplicate" --color "cccccc" --description "For issues that are duplicates of existing ones." --repo $REPO_NAME
+gh label create "Status: Won't Fix" --color "e4e4e4" --description "For issues that will not be addressed." --repo $REPO_NAME
+```
